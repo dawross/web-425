@@ -7,11 +7,12 @@
 ; Description: Angular Hello World
 ;===========================================
 */
+//imports
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-
+//NgModule
 @NgModule({
   declarations: [
     AppComponent
@@ -22,4 +23,5 @@ import { AppComponent } from './app.component';
   providers: [],
   bootstrap: [AppComponent]
 })
+//exports
 export class AppModule { }

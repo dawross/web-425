@@ -10,13 +10,13 @@
 
 //import component
 import { Component } from '@angular/core';
-
+//components
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-//changed default title
+//exports
 export class AppComponent {
   myWorld = "You're now in Dan Ross' world!"
 }
