@@ -1,3 +1,12 @@
+/*
+============================================
+; Title: Assignment 1.5 - module
+; Author: Dan Ross
+; Date: 19 Dec 2020
+; Modified By: Dan Ross
+; Description: module
+;===========================================
+*/
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
