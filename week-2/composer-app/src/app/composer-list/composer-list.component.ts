@@ -29,6 +29,7 @@ export default class Composer {
 export class ComposerListComponent implements OnInit {
   composers: Array<Composer>;
 
+  //This creates an array with 5 composer objects
   constructor() {
     this.composers = [
       new Composer("Wolfgang Amadeus Mozart", "Classical"),
