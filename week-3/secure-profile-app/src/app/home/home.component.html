@@ -1,0 +1,48 @@
+<!-- /*
+============================================
+; Exercise 3.3 - Passing Data to Routes, Part 2
+; Author: Dan Ross
+; Date: 18 Jan 2021
+; Modified By: Dan Ross
+; Description: This is the home component HTML page.
+;===========================================
+*/ -->
+<!-- Start our navigation here. -->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <ul class="navbar-nav">
+    <li class="nav-item active">
+      <a class="nav-link" href="#">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">About</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Contact Us</a>
+    </li>
+  </ul>
+</nav>
+<!-- End our navigation here. -->
+<!-- Start our main container here -->
+<div class="container">
+  <br />
+  <br />
+  <h2>Exercise 3.3 - Passing Data to Routes, Part 2</h2>
+  <br />
+  <br />
+  <!-- This section will show if isLogged in is 'true.' -->
+  <div class="row" *ngIf="isLoggedIn; else showError">
+    <div class="col-sm-4"><app-my-image></app-my-image></div>
+    <div class="col-sm-8"><app-my-details></app-my-details></div>
+  </div>
+  <!-- This error will show if the if/else statement for isLoggedIn is 'false.' -->
+  <ng-template #showError>
+    <div class="row">
+      <div class="col-sm-12">
+        <h4 class="alert alert-danger">
+          You are not authorized to view this content.
+        </h4>
+      </div>
+    </div>
+  </ng-template>
+</div>
+<!-- End our main container here -->
