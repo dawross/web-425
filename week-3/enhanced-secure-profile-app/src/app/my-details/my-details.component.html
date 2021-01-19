@@ -1,0 +1,22 @@
+<!-- /*
+============================================
+; Assignment 3.4 – Guarding Routes
+; Author: Dan Ross
+; Date: 18 Jan 2021
+; Modified By: Dan Ross
+; Description: This is the my-details component HTML page.
+;===========================================
+*/ -->
+
+<ul class="list-group">
+  <li class="list-group-item"><strong>Name: </strong>{{ myProfile.fullName }}</li>
+  <li class="list-group-item"><strong>Favorite food: </strong>{{ myProfile.favoriteFood }}</li>
+  <li class="list-group-item"><strong>Favorite color: </strong> {{ myProfile.favoriteColor }}</li>
+  <li class="list-group-item">
+    <strong>Keywords:</strong>
+    <!-- This will iterate over the keyword array and output each value in the array.  -->
+    <span *ngFor="let word of myProfile.keywords">
+      {{ word }}
+    </span>
+  </li>
+</ul>

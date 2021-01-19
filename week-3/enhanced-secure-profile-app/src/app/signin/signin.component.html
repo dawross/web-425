@@ -1,0 +1,44 @@
+<!-- /*
+============================================
+; Assignment 3.4 – Guarding Routes
+; Author: Dan Ross
+; Date: 18 Jan 2021
+; Modified By: Dan Ross
+; Description: This is the signin component HTML page.
+;===========================================
+*/ -->
+<!-- Start our sign in container here. -->
+<div class="card signin-container">
+  <div class="card-body">
+    <h3 class="card-title">Sign in</h3>
+    <!-- Start our sign in form here. -->
+    <form class="card-text">
+      <div class="form-group">
+        <label for="textUserName">Username</label>
+        <input
+          type="text"
+          class="form-control"
+          id="textUserName"
+          placeholder="Enter your username"
+        />
+      </div>
+      <div class="form-group">
+        <label for="txtPassword">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="txtPassword"
+          placeholder="Enter your password"
+        />
+      </div>
+
+      <div class="form-group">
+        <button class="btn btn-primary float-right" (click)="signin()">
+          Submit
+        </button>
+      </div>
+    </form>
+    <!-- End our sign in form here. -->
+  </div>
+</div>
+<!-- End our sign in container here. -->
