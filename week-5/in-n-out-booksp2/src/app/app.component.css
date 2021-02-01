@@ -1,0 +1,17 @@
+/*
+============================================
+; Title: Exercise 5.3 - Data Tables
+; Author: Dan Ross
+; Date: 30 Jan 2021
+; Modified By: Dan Ross
+; Description: This is the app component scss file.
+;===========================================
+*/
+.logo {
+  margin-top: 5px
+}
+.main-container {
+  padding-top: 25px;
+  width: 80%;
+  margin: 0 auto;
+}
