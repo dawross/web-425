@@ -1,0 +1,51 @@
+<!-- /*
+============================================
+; Exercise 6.2 - Input/Output Properties, Part 1
+; Author: Dan Ross
+; Date: 06 Feb 2021
+; Modified By: Dan Ross
+; Description: This is the 'book-list' HTML file.
+;===========================================
+*/ -->
+<!-- Start main container here. -->
+<div fxLayout="column wrap">
+  <h2 fxFlex class="green">Top 5 Favorite Books</h2>
+  <!-- Start our table of books here. -->
+  <table style="width:100%;" fxFlex mat-table [dataSource]="books" class="mat-elevation-z8">
+    <!-- This will populate from our header Array in the book-list.component.ts-->
+    <tr mat-header-row *matHeaderRowDef="header"></tr>
+    <tr mat-row *matRowDef="let row; columns: header"></tr>
+    <!-- Print out the array of books here. -->
+    <ng-container matColumnDef="isbn">
+      <th mat-header-cell *matHeaderCellDef>ISBN</th>
+      <td mat-cell *matCellDef="let element">
+        <!-- This will generate the link to show the book details. -->
+        <a class="a-link blue" (click)="showBookDetails(element.isbn)">
+          <!-- Print out ISBN. -->
+          {{ element.isbn }}
+        </a>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="title">
+      <th mat-header-cell *matHeaderCellDef>Title</th>
+      <td mat-cell *matCellDef="let element">
+        <!-- Print out book title. -->
+        {{ element.title }}
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="numOfPages">
+      <th mat-header-cell *matHeaderCellDef>Number of Pages</th>
+      <td mat-cell *matCellDef="let element">
+        <!-- Print out number of pages. -->
+        {{ element.numOfPages }}
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="authors">
+      <th mat-header-cell *matHeaderCellDef>authors</th>
+      <td mat-cell *matCellDef="let element">
+        <!-- Print out authors in a comma delimited array. -->
+        {{ element.authors.join(', ')}}
+      </td>
+    </ng-container>
+  </table> <!-- End our table of books here. -->
+</div><!-- Start main container here. -->

@@ -1,0 +1,13 @@
+/*
+============================================
+; Exercise 6.2 - Input/Output Properties, Part 1
+; Author: Dan Ross
+; Date: 06 Feb 2021
+; Modified By: Dan Ross
+; Description: This is the 'wishlist-create' CSS stylesheet.
+;===========================================
+*/
+
+.wishlist-create-form {
+  width: 60%;
+}

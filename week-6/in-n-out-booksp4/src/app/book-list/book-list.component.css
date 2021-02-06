@@ -1,0 +1,16 @@
+/*
+============================================
+; Exercise 6.2 - Input/Output Properties, Part 1
+; Author: Dan Ross
+; Date: 06 Feb 2021
+; Modified By: Dan Ross
+; Description: This is our book-list CSS style sheet.
+;===========================================
+*/
+.a-link {
+  text-decoration: none;
+  cursor: pointer;
+}
+.a-link:hover {
+  text-decoration: underline;
+}
