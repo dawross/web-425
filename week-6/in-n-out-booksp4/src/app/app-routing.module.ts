@@ -24,7 +24,7 @@ const routes: Routes = [
     component: BookListComponent
   },
   {
-    //This is for the URL http://localhost:4200./book-list
+    //This is for the URL http://localhost:4200/book-list
     path: 'book-list',
     component: BookListComponent
   },
