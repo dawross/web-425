@@ -9,10 +9,10 @@
 */
 //These are our imports
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { of } from 'rxjs';
-import { map } from 'rxjs/operators';
-import { IBook } from './book.interface';
+// import { Observable } from 'rxjs';
+// import { of } from 'rxjs';
+// import { map } from 'rxjs/operators';
+// import { IBook } from './book.interface';
 import { HttpClient, HttpParams } from '@angular/common/http';
 
 
@@ -37,7 +37,6 @@ export class BooksService {
 
 
   constructor(private http: HttpClient) {
-
   }
 
   getBooks() {
@@ -49,6 +48,4 @@ export class BooksService {
     //Return the http.get function passing in the openlibrary url and the params object.
     return this.http.get('https://openlibrary.org/api/books', { params: params });
   }
-
-
 }
