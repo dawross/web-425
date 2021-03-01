@@ -1,0 +1,37 @@
+<!-- /*
+============================================
+; Title: app.component.html
+; Author: Dan Ross
+; Date: 27 Feb 2021
+; Modified By: Dan Ross
+; Description: This file contains all the HTML code used by the component to display itself.
+;===========================================
+*/ -->
+<!-- Start our navigation here -->
+<mat-toolbar class="toolbar">
+  <mat-toolbar-row class="nav">
+    <div fxFlex="0 100 100%" class="logo">
+     <a href="/home"> <img src="./assets/bob_cr_logo.png" height="80" alt="Bob's Computer Repair Shop" /></a>
+    </div>
+    <div style="width: 80%">
+      <div fxLayout="row wrap" fxLayoutAlign="end start">
+        <button mat-button routerLink="/home">Home</button>
+        <button mat-button routerLink="/contact">Contact</button>
+        <button mat-button routerLink="/about">About</button>
+      </div>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar><!-- End our navigation here -->
+<!-- Start our main container here.  -->
+<div fxLayout="row wrap">
+  <div fxFlex>
+    <mat-card class="main-container">
+      <mat-card-content>
+        <!-- The Router Outlet shows the HTML code for the active component -->
+        <router-outlet></router-outlet>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+<!-- End our main container here.  -->

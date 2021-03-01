@@ -1,0 +1,42 @@
+<!-- /*
+============================================
+; Title: home.component.html
+; Author: Dan Ross
+; Date: 27 Feb 2021
+; Modified By: Dan Ross
+; Description: This is the home component HTML file.
+;===========================================
+*/ -->
+<form [formGroup]="servicesForm">
+  <mat-list>
+    <mat-list-item *ngFor="let item of services_list">
+      <!-- Display our checkboxes with our services list  -->
+      <mat-checkbox color="primary" (change)="list_change(item)"
+        >{{ item.name }} ({{ item.price | currency }})</mat-checkbox
+      >
+    </mat-list-item>
+  </mat-list>
+
+  <hr />
+  <div class="prts-lbr">
+    <mat-form-field appearance="fill">
+      <mat-label>Parts</mat-label>
+      <!-- Only allow numbers and decimals in the parts field -->
+      <input type="number" (keypress)="keyPressNumbersDecimal($event)" name="parts" matInput formControlName="parts" placeholder="Enter Value..." />
+    </mat-form-field>
+    <br />
+    <mat-form-field appearance="fill">
+      <mat-label>Labor</mat-label>
+      <!-- Only allow numbers and decimals in the labor field -->
+      <input type="number" (keypress)="keyPressNumbersDecimal($event)" name="parts" matInput formControlName="labor" placeholder="Hours of Labor @$50.00" />
+    </mat-form-field>
+  </div>
+  <hr />
+
+  <div class="clc-btn">
+    <!-- This button will open the invoice dialog with our calculated results.  -->
+    <button mat-stroked-button color="primary" (click)="calculateResults()">
+      CALCULATE
+    </button>
+  </div>
+</form>

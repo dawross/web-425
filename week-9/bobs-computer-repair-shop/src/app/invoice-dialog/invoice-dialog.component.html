@@ -1,0 +1,37 @@
+<!-- /*
+============================================
+; Title: invoice-dialog.component.html
+; Author: Dan Ross
+; Date: 27 Feb 2021
+; Modified By: Dan Ross
+; Description: This is the invoice dialog HTML file.
+;===========================================
+*/ -->
+<mat-card>
+  <h3>INVOICE SUMMARY</h3>
+ <!-- Display today's date.  -->
+  <p>Date: {{ this.invoiceDate | date }}</p>
+  <mat-card-content>
+    <div fxLayout="column">
+      <table>
+        <!-- Display the selected services -->
+        <tr *ngFor="let item of service">
+          <td>{{ item.name }} </td>
+          <td>{{ item.price | currency}} </td>
+        </tr>
+        <tr>&nbsp;</tr>
+        <tr>
+          <td>Total Charges</td>
+          <!-- This will display the total charges.  -->
+          <td>{{ this.invoice | currency }}</td>
+        </tr>
+      </table>
+    </div>
+  </mat-card-content>
+  <mat-card-actions align="end">
+    <!--This button will open up the print dialog.  -->
+    <button mat-stroked-button color="primary" onclick="window.print()">PRINT <mat-icon class="print-icon">print</mat-icon></button>
+    <!-- This button will close the invoice dialog.  -->
+    <button mat-stroked-button color="primary" matDialogClose="confirm">CLOSE</button>
+  </mat-card-actions>
+</mat-card>
